@@ -1,19 +1,14 @@
-import torch
-
-from torch import nn
-from torch.nn import DataParallel
-from torch.nn.parallel import DistributedDataParallel
-import torch.backends.cudnn as cudnn
-# from torchvision import models
 import numpy as np
-
-from UniformAugment.networks.resnet import ResNet
-from UniformAugment.networks.pyramidnet import PyramidNet
-from UniformAugment.networks.shakeshake.shake_resnet import ShakeResNet
-from UniformAugment.networks.wideresnet import WideResNet
-from UniformAugment.networks.shakeshake.shake_resnext import ShakeResNeXt
+import torch
+import torch.backends.cudnn as cudnn
 from UniformAugment.networks.efficientnet_pytorch import EfficientNet, RoutingFn
-from UniformAugment.tf_port.tpu_bn import TpuBatchNormalization
+from UniformAugment.networks.pyramidnet import PyramidNet
+from UniformAugment.networks.resnet import ResNet
+from UniformAugment.networks.shakeshake.shake_resnet import ShakeResNet
+from UniformAugment.networks.shakeshake.shake_resnext import ShakeResNeXt
+from UniformAugment.networks.wideresnet import WideResNet
+from torch import nn
+from torch.nn.parallel import DistributedDataParallel
 
 
 def get_model(conf, num_class=10, local_rank=-1):
