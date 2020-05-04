@@ -24,7 +24,6 @@ from UniformAugment.data import get_dataloaders
 from UniformAugment.lr_scheduler import adjust_learning_rate_resnet
 from UniformAugment.metrics import accuracy, Accumulator, CrossEntropyLabelSmooth
 from UniformAugment.networks import get_model, num_class
-from UniformAugment.tf_port.rmsprop import RMSpropTF
 from UniformAugment.aug_mixup import CrossEntropyMixUpLabelSmooth, mixup
 from warmup_scheduler import GradualWarmupScheduler
 
@@ -143,14 +142,6 @@ def train_and_eval(tag, dataroot, test_ratio=0.0, cv_fold=0, reporter=None, metr
             momentum=C.get()['optimizer'].get('momentum', 0.9),
             weight_decay=0.0,
             nesterov=C.get()['optimizer'].get('nesterov', True)
-        )
-    elif C.get()['optimizer']['type'] == 'rmsprop':
-        optimizer = RMSpropTF(
-            model.parameters(),
-            lr=C.get()['lr'],
-            weight_decay=0.0,
-            alpha=0.9, momentum=0.9,
-            eps=0.001
         )
     else:
         raise ValueError('invalid optimizer type=%s' % C.get()['optimizer']['type'])
