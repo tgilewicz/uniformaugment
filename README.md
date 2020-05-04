@@ -25,10 +25,11 @@ transform_train.transforms.insert(0, UniformAugment())
 
 The details of the experiment were consulted with the authors of the UniformAugment paper.
 
-You can run an experiment with, 
+You can run an example experiment with, 
 
 ```bash
-$ python UniformAugment/train.py -c confs/wresnet28x10_cifar.yaml --save cifar10_wres28x10.pth --tag v1
+$ python UniformAugment/train.py -c confs/wresnet28x10_cifar.yaml --dataset cifar10 \
+    --save cifar10_wres28x10.pth --dataroot ~/data --tag v1
 ```
 
 ### CIFAR-10 Classification
