@@ -3,7 +3,7 @@
 Unofficial PyTorch Reimplementation of [UniformAugment](https://arxiv.org/abs/2003.14348). Most of codes are from [Fast AutoAugment](https://github.com/kakaobrain/fast-autoaugment) and [PyTorch RandAugment](https://github.com/ildoonet/pytorch-randaugment).
 
 ## Introduction
-UniformAugment is an automated data augmentation approach that completely avoids a search phase.
+UniformAugment is an automated data augmentation approach that completely avoids a search phase. UniformAugment’s effectiveness is comparable to the known methods, while still being highly efficient by virtue of not requiring any search.
 
 ## Usage
 
