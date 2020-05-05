@@ -43,7 +43,7 @@ $ python UniformAugment/train.py -c confs/wresnet28x10_cifar.yaml --dataset cifa
 
 | Model             | Paper's Result | Run1         | Run2         | Run3         | Run4         | Avg (Ours)   |
 |-------------------|---------------:|-------------:|-------------:|-------------:|-------------:|-------------:|
-| Wide-ResNet 28x10 | **82.82**      | 83.55        | 82.56        | TODO         | TODO         | TODO         |
+| Wide-ResNet 28x10 | **82.82**      | 83.55        | 82.56        | 82.66        | 82.72        | **82.87**    |
 | Wide-ResNet 40x2  | **79.01**      | 79.06        | 79.08        | 79.09        | 78.77        | **79.00**    |
 
 
