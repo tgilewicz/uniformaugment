@@ -36,15 +36,15 @@ $ python UniformAugment/train.py -c confs/wresnet28x10_cifar.yaml --dataset cifa
 
 | Model             | Paper's Result | Run1         | Run2         | Run3         | Run4         | Avg (Ours)   |
 |-------------------|---------------:|-------------:|-------------:|-------------:|-------------:|-------------:|
-| Wide-ResNet 28x10 | **97.33**      | TODO         | TODO         | TODO         | TODO         | TODO         |
+| Wide-ResNet 28x10 | **97.33**      | 97.26        | 97.31        | TODO         | TODO         | TODO         |
 | Wide-ResNet 40x2  | **96.25**      | 96.27        | 96.36        | 96.5         | 96.54        | **96.41**    |
 
 ### CIFAR-100 Classification, TOP1 Accuracy
 
 | Model             | Paper's Result | Run1         | Run2         | Run3         | Run4         | Avg (Ours)   |
 |-------------------|---------------:|-------------:|-------------:|-------------:|-------------:|-------------:|
-| Wide-ResNet 28x10 | **82.82**      | 83.55        | TODO         | TODO         | TODO         | TODO         |
-| Wide-ResNet 40x2  | **79.01**      | 79.06        | 79.08        | TODO         | TODO         | TODO         |
+| Wide-ResNet 28x10 | **82.82**      | 83.55        | 82.56        | TODO         | TODO         | TODO         |
+| Wide-ResNet 40x2  | **79.01**      | 79.06        | 79.08        | 79.09        | 78.77        | **79.00**    |
 
 
 
