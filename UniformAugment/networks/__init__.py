@@ -6,7 +6,8 @@ from UniformAugment.networks.pyramidnet import PyramidNet
 from UniformAugment.networks.resnet import ResNet
 from UniformAugment.networks.shakeshake.shake_resnet import ShakeResNet
 from UniformAugment.networks.shakeshake.shake_resnext import ShakeResNeXt
-from UniformAugment.networks.wideresnet import WideResNet
+from UniformAugment.networks.wideresnet2 import WideResNet28_10, WideResNet40_2
+
 from torch import nn
 from torch.nn.parallel import DistributedDataParallel
 
@@ -19,9 +20,9 @@ def get_model(conf, num_class=10, local_rank=-1):
     elif name == 'resnet200':
         model = ResNet(dataset='imagenet', depth=200, num_classes=num_class, bottleneck=True)
     elif name == 'wresnet40_2':
-        model = WideResNet(40, 2, dropout_rate=0.0, num_classes=num_class)
+        model = WideResNet40_2(dropout=0.0, num_classes=num_class)
     elif name == 'wresnet28_10':
-        model = WideResNet(28, 10, dropout_rate=0.0, num_classes=num_class)
+        model = WideResNet28_10(dropout=0.0, num_classes=num_class)
 
     elif name == 'shakeshake26_2x32d':
         model = ShakeResNet(26, 32, num_class)
