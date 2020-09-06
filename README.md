@@ -5,6 +5,11 @@ Unofficial PyTorch Reimplementation of [UniformAugment](https://arxiv.org/abs/20
 ## Introduction
 UniformAugment is an automated data augmentation approach that completely avoids a search phase. UniformAugment’s effectiveness is comparable to the known methods, while still being highly efficient by virtue of not requiring any search.
 
+## Install 
+```
+pip install git+https://github.com/tgilewicz/uniformaugment/
+```
+
 ## Usage
 
 ```python
