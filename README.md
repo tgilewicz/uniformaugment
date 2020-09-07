@@ -57,7 +57,7 @@ $ python UniformAugment/train.py -c confs/wresnet28x10_cifar.yaml --dataset cifa
 
 | Model             | Paper's Result | Ours         |
 |-------------------|---------------:|-------------:|
-| ResNet-50         | **77.63**      | Stay tuned   |
+| ResNet-50         | **77.63**      | **77.80**   |
 | ResNet-200        | **80.4**       | Stay tuned   |
 
 
